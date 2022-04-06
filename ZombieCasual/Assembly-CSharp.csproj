@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\MousePosition3D.cs" />
     <Compile Include="Assets\Scripts\BasicEnemy.cs" />
     <Compile Include="Assets\Scripts\Attack.cs" />
+    <Compile Include="Assets\Scripts\Follower.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
