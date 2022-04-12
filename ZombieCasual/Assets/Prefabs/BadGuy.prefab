@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6038205681983670760}
   - component: {fileID: 6038205681983670772}
   - component: {fileID: 6038205681983670771}
-  - component: {fileID: 4654487379734409449}
+  - component: {fileID: 1076698340797126075}
   m_Layer: 0
   m_Name: BadGuy
   m_TagString: Enemy
@@ -127,7 +127,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4654487379734409449
+--- !u!114 &1076698340797126075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,8 +136,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6038205681983670761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cef864443a39c441ba7dc48f24405da, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f40077a85f5e4c42b5ca6d49aff3fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MouseBall: {fileID: 6586269860655316351, guid: 30fa044a6a4c5bd4697054db7844b908, type: 3}
-  playerSpeed: 2
+  Player: {fileID: 3425262729174271498, guid: 621cb943f0ea0ac429090ded89a5270a, type: 3}
+  ZombieSpeed: 2

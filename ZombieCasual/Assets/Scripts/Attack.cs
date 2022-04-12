@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public int Str;
-    // Start is called before the first frame update
+ 
     void Start()
     {
         
