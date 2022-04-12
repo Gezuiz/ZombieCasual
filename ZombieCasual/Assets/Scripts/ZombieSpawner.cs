@@ -16,11 +16,11 @@ public class ZombieSpawner : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         ZombieSpawn();
     }
    
-    void ZombieSpawn()
+    public void ZombieSpawn()
     {
         if (RoundManager.ZombiesThisRound > 0)
         {
