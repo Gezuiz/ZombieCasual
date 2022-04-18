@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ZombieFollower : MonoBehaviour
 {
-    public Transform Player;
+    public Transform Following;
     public float ZombieSpeed;
+    GameObject player;
     
 
 
@@ -18,8 +19,9 @@ public class ZombieFollower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(Player);
-        transform.Translate(0.0f, 0.0f, ZombieSpeed * Time.deltaTime);
+        Following = GameObject.FindGameObjectWithTag("SubPlayer").transform;
+        transform.LookAt(Following);
+        transform.Translate(0.0f, 0, ZombieSpeed * Time.deltaTime);
     }
 }
 
