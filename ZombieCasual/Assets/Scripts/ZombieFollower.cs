@@ -7,6 +7,7 @@ public class ZombieFollower : MonoBehaviour
     public Transform Following;
     public float ZombieSpeed;
     GameObject player;
+    public int ZomStr;
     
 
 
@@ -23,5 +24,11 @@ public class ZombieFollower : MonoBehaviour
         transform.LookAt(Following);
         transform.Translate(0.0f, 0, ZombieSpeed * Time.deltaTime);
     }
+    private void OnTriggerEnter(Collider SubPlayer)
+    {
+        Debug.Log("Macetou o Jogador");
+        SubPlayer.gameObject.SendMessage("PlayerDamage", ZomStr);
+    }
+
 }
 

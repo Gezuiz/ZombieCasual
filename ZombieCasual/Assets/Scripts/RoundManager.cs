@@ -29,6 +29,11 @@ public class RoundManager : MonoBehaviour
             Rounds += 1;
             ZombiesThisRound += Rounds + 5;
             zombieSpawner.ZombieSpawn();
+
+            if(ZombiesThisRound > 20)
+            {
+                ZombiesThisRound = 20;
+            }
         }
     }
 
