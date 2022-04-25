@@ -7,12 +7,14 @@ public class BasicEnemy : MonoBehaviour
     public int vida;
     PointsCounter PointsCounter;
     RoundManager roundManager;
-    
+    private GameObject zombie;
+
     // Start is called before the first frame update
     void Start()
     {
         PointsCounter = FindObjectOfType<PointsCounter> ();
         roundManager = FindObjectOfType<RoundManager>();
+        zombie = this.gameObject;
     }
 
     // Update is called once per frame
@@ -31,5 +33,12 @@ public class BasicEnemy : MonoBehaviour
         vida -= str;
         Debug.Log(vida);
         PointsCounter.Points += 10;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Door")
+        {
+            other.gameObject.SendMessage("TeleportZombie", zombie);
+        }
     }
 }

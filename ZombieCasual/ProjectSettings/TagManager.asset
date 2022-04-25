@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - SubPlayer
+  - Door
   layers:
   - Default
   - TransparentFX

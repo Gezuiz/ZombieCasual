@@ -5,10 +5,11 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public int Str;
+    private GameObject self;
  
     void Start()
     {
-        
+        self = this.gameObject;
     }
 
     // Update is called once per frame
@@ -17,9 +18,17 @@ public class Attack : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider Enemy)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Macetou");
-        Enemy.gameObject.SendMessage("Damage",Str);
+        if(other.tag == "Enemy")
+        {
+            Debug.Log("Macetou");
+            other.gameObject.SendMessage("Damage", Str);
+        }
+        //else if(other.tag == "Door")
+        //{
+            //other.gameObject.SendMessage("Teleport", self);
+        //}
+        
     }
 }

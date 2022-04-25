@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform Player;
-    public float playerSpeed;
+    //public Transform Player;
+    //public float playerSpeed;
+    public Transform [] Pos; 
 
 
     // Start is called before the first frame update
@@ -15,9 +16,29 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    public void RoomChange()
     {
-        transform.LookAt(Player);
-        //transform.Translate(0.0f, 0.0f, playerSpeed * Time.deltaTime);
+        transform.position = Pos[0].position;
+    }
+   
+    public void RoomChange1 ()
+    {
+            transform.position = Pos[1].position;
+    }
+
+    public void RoomChange2()
+    {
+        transform.position = Pos[2].position;
+    }
+
+    public void RoomChange3()
+    {
+        transform.position = Pos[3].position;
+    }
+
+    public void RoomChange4()
+    {
+        transform.position = Pos[4].position;
     }
 }
