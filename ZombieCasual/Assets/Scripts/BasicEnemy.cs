@@ -8,6 +8,7 @@ public class BasicEnemy : MonoBehaviour
     PointsCounter PointsCounter;
     RoundManager roundManager;
     private GameObject zombie;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class BasicEnemy : MonoBehaviour
         PointsCounter = FindObjectOfType<PointsCounter> ();
         roundManager = FindObjectOfType<RoundManager>();
         zombie = this.gameObject;
+        anim.Play("Base Layer.Scene");
     }
 
     // Update is called once per frame

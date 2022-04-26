@@ -15,6 +15,7 @@ public class ZombieSpawner : MonoBehaviour
     {
         RoundManager = FindObjectOfType<RoundManager>();
         ZombieSpawn();
+        new Quaternion (0, -90, 0, 0);
     }
 
     IEnumerator Wait()
