@@ -140,5 +140,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Following: {fileID: 0}
-  ZombieSpeed: 2
+  ZombieSpeed: 3
   ZomStr: 1

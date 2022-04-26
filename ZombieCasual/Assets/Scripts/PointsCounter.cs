@@ -22,7 +22,10 @@ public class PointsCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Points < 0)
+        {
+            Points = 0;
+        }
     }
 
 }
