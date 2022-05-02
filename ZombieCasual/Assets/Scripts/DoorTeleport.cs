@@ -9,12 +9,14 @@ public class DoorTeleport : MonoBehaviour
     public Transform[] exit;
     PointsCounter PointsCounter;
     public bool open;
+    public GameObject NextDoor;
 
     // Start is called before the first frame update
     void Start()
     {
         cameraFollow = FindObjectOfType<CameraFollow>();
         PointsCounter = FindObjectOfType<PointsCounter>();
+        
     }
 
     // Update is called once per frame
