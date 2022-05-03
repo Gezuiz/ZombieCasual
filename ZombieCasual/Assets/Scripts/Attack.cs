@@ -6,6 +6,7 @@ public class Attack : MonoBehaviour
 {
     public int Str;
     private GameObject self;
+    public Animator anim;
  
     void Start()
     {
@@ -22,7 +23,7 @@ public class Attack : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            Debug.Log("Macetou");
+            anim.SetTrigger("Deu Dano");
             other.gameObject.SendMessage("Damage", Str);
         }
         //else if(other.tag == "Door")

@@ -22,7 +22,7 @@ public class BasicEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(vida == 0)
+        if(vida <= 0)
         {
             PointsCounter.Points += 60;
             roundManager.ZombiesAlive--;
