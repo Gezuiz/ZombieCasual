@@ -6,16 +6,16 @@ public class ZombieSpawner : MonoBehaviour
 {
     RoundManager RoundManager;
      public GameObject BadGuy;
-    public Vector3 SpawnPosition;
-    public int InThisRoom;
+    public Vector3[] SpawnPosition;
+    public int Window;
     
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         RoundManager = FindObjectOfType<RoundManager>();
         ZombieSpawn();
-        new Quaternion (0, -90, 0, 0);
+     
     }
 
     IEnumerator Wait()
@@ -28,7 +28,8 @@ public class ZombieSpawner : MonoBehaviour
     {
         if (RoundManager.ZombiesThisRound > 0)
         {
-            Instantiate(BadGuy, SpawnPosition, Quaternion.identity);
+            Window = Random.Range(1, 5);
+            Instantiate(BadGuy, SpawnPosition[Window], Quaternion.identity);
             RoundManager.ZombiesThisRound--;
             RoundManager.ZombiesAlive++;
             StartCoroutine(Wait());

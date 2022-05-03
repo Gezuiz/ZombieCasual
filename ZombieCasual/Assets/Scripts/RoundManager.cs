@@ -9,7 +9,7 @@ public class RoundManager : MonoBehaviour
 
     public int ZombiesAlive;
     public int ZombiesThisRound;
-    ZombieSpawner zombieSpawner;
+    ZombieSpawner ZombieSpawner;
 
     private int _Rnds;
     public int Rounds
@@ -28,7 +28,7 @@ public class RoundManager : MonoBehaviour
         {
             Rounds += 1;
             ZombiesThisRound += Rounds + 5;
-            zombieSpawner.ZombieSpawn();
+            ZombieSpawner.ZombieSpawn();
 
             if(ZombiesThisRound > 20)
             {
@@ -40,6 +40,6 @@ public class RoundManager : MonoBehaviour
     void Start()
     {
         Rounds = 1;
-        zombieSpawner = FindObjectOfType<ZombieSpawner>();
+        ZombieSpawner = FindObjectOfType<ZombieSpawner>();
     }
 }
